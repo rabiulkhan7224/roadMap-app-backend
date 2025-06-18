@@ -32,13 +32,10 @@ export const login = async (req: Request, res: Response) => {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'strict',
-        }).json({ message: 'Logged in' });
-    }
+        }).json({ message: 'Logged in' });}
     catch (error) {
         console.error("Error during login:", error)
-        res.status(500).json({ message: "Internal server error" })
-    }
-
+        res.status(500).json({ message: "Internal server error" })}
 }
 export const logout = (req: Request, res: Response) => {
   res.clearCookie('token').json({ message: 'Logged out' });
