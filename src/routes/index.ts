@@ -22,7 +22,7 @@ router.post('/auth/register', register);
 router.post('/auth/login', login);
 router.post('/auth/logout', logout);
 // /me
-router.get('/auth/me', authMiddleware, getUserProfile)
+router.post('/auth/me', authMiddleware, getUserProfile)
 router.post('/auth/mes', authMiddleware, (req, res) => {
   res.json({ user: req.user });
 });

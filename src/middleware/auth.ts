@@ -40,3 +40,6 @@ export const authMiddleware = (req: AuthRequest, res: Response, next: NextFuncti
         res.status(401).json({ message: 'Invalid token' });
     }
 };
+
+
+
