@@ -51,7 +51,10 @@ export const login = async (req: Request, res: Response) => {
     }
 }
 export const logout = (req: Request, res: Response) => {
-    res.clearCookie('token').json({ message: 'Logged out' });
+
+    res
+    .clearCookie('token')
+    .json({ message: 'Logged out' });
 }
 
 export const getUserProfile = async (req: AuthRequest, res: Response) => {
