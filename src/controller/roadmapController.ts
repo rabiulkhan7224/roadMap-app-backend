@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import RoadmapItem from "../models/RoadmapItem";
 import { AuthRequest } from "../middleware/auth";
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 export const getRoadmapItems = async (req: Request, res: Response) => {
     const { status, sort } = req.query
@@ -19,17 +19,87 @@ export const getRoadmapItems = async (req: Request, res: Response) => {
 }
 
 
-export const upvoteRoadmap = async (req: AuthRequest, res: Response) => {
-    const roadmap = await RoadmapItem.findById(req.params.id)
-    if (!roadmap) {
-        res.status(404).json({ message: 'not found' })
-        return;}
-    if (roadmap.upvotedBy.includes(new mongoose.Types.ObjectId(req.userId!))) {
-        res.status(400).json({ message: 'already upvoted' })
+// export const upvoteRoadmap = async (req: AuthRequest, res: Response) => {
+//     const roadmap = await RoadmapItem.findById(req.params.id)
+//     if (!roadmap) {
+//         res.status(404).json({ message: 'not found' })
+//         return;
+//     }
+//     if (roadmap.upvotedBy.includes(new mongoose.Types.ObjectId(req.userId!))) {
+//         res.status(400).json({ message: 'already upvoted' })
+//         return;
+//     }
+//     roadmap.upvotedBy.push(new Schema.Types.ObjectId(req.userId!))
+//     roadmap.upvotes += 1
+//     await roadmap.save()
+//     res.json(roadmap)
+// }
+
+
+export const toggleUpvote = async (req: AuthRequest, res: Response) => {
+    const userId = req.userId;
+    const { id } = req.params;
+
+    const item = await RoadmapItem.findById(id);
+    if (!item) {
+        res.status(404).json({ message: "Not found" });
         return;
     }
-    roadmap.upvotedBy.push(new mongoose.Types.ObjectId(req.userId!))
-    roadmap.upvotes += 1
-    await roadmap.save()
-    res.json(roadmap)
+
+    const userObjectId = new mongoose.Types.ObjectId(userId);
+
+    const index = item.upvotedBy.findIndex(uid => new mongoose.Types.ObjectId(uid.toString()).equals(userObjectId));
+
+    if (index !== -1) {
+        item.upvotedBy.splice(index, 1); // Remove upvote
+    } else {
+        item.upvotedBy.push(new Schema.Types.ObjectId(userId!)); // Add upvote
+    }
+
+    await item.save();
+    res.json({ upvotes: item.upvotedBy.length });
+};
+
+
+// // GET /api/roadmap?search=dark&sortBy=votes
+// export const getRoadmaps = async (req: Request, res: Response) => {
+//   try {
+//     const { search = '', sortBy = 'votes' } = req.query;
+
+//     const query: any = {
+//       $or: [
+//         { title: { $regex: search as string, $options: 'i' } },
+//         { category: { $regex: search as string, $options: 'i' } }
+//       ]
+//     };
+
+//     let sort: any = {};
+//     if (sortBy === 'votes') {
+//       sort.votes = -1;
+//     } else if (sortBy === 'recent') {
+//       sort.createdAt = -1;
+//     }
+
+//     const roadmaps = await Roadmap.find(query).sort(sort);
+//     res.status(200).json(roadmaps);
+//   } catch (err) {
+//     res.status(500).json({ message: 'Failed to fetch roadmaps' });
+//   }
+// };
+
+
+// // GET /api/roadmap/:id
+export const getRoadmapItem = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    try {
+        const item = await RoadmapItem.findById(id);
+        if (!item) {
+             res.status(404).json({ message: "Roadmap item not found" });
+                return;
+        }
+        res.status(200).json(item);
+    } catch (error) {
+        console.error("Error fetching roadmap item:", error);
+        res.status(500).json({ message: "Internal server error" });
+    }
 }

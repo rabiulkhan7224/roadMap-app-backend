@@ -1,10 +1,18 @@
 import { Request, Response } from "express";
 import RoadmapItem from "../models/RoadmapItem";
+import { AuthRequest } from "../middleware/auth";
 
-export const createRoadmapItem = async (req:Request, res:Response) => {
-  const { title, description, status, category } = req.body;
-  const roadmap = await RoadmapItem.create({ title, description, status, category });
-  res.status(201).json(roadmap);
+export const createRoadmapItem = async (req:AuthRequest, res:Response) => {
+  
+    const { title, description, status } = req.body;
+    const Item = RoadmapItem.create({
+        title,
+        description,
+        status,
+        createdBy: req.userId, 
+    });
+    res.status(201).json({ message: 'Roadmap item created successfully' });
+
 };
 
 export const updateRoadmapItem = async (req:Request, res:Response) => {
