@@ -11,7 +11,7 @@ export interface IComment extends Document {
 const CommentSchema = new Schema<IComment>({
   roadmapItemId: { type: Schema.Types.ObjectId, ref: 'RoadmapItem', required: true },
   userId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
-  content: { type: String, required: true, },
+  content: { type: String, required: true, maxlength: 300 },
   parentCommentId: { type: Schema.Types.ObjectId, ref: 'Comment', default: null },
   level: { type: Number, default: 0 },
 }, { timestamps: true });

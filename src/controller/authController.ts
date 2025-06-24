@@ -39,8 +39,8 @@ export const login = async (req: Request, res: Response) => {
         res
             .cookie('token', token, {
                 httpOnly: true,
-                secure: process.env.NODE_ENV === 'production', 
-                sameSite: 'none', 
+                secure: process.env.NODE_ENV === 'production',
+                sameSite: 'none',
                 maxAge: 7 * 24 * 60 * 60 * 1000,
             })
             .json({ message: 'Logged in' });
@@ -50,11 +50,22 @@ export const login = async (req: Request, res: Response) => {
         res.status(500).json({ message: "Internal server error" })
     }
 }
+// const cookieOptions = {
+//   httpOnly: true,
+//   secure: process.env.NODE_ENV === 'production',
+//   sameSite: 'lax',
+//   path: '/',
+// };
+
 export const logout = (req: Request, res: Response) => {
 
     res
-    .clearCookie('token')
-    .json({ message: 'Logged out' });
+        .clearCookie('token', {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production',
+            sameSite: 'none',
+        })
+        .json({ message: 'Logged out' });
 }
 
 export const getUserProfile = async (req: AuthRequest, res: Response) => {

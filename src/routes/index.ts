@@ -2,7 +2,7 @@ import express from 'express';
 import { createRoadmapItem, deleteRoadmapItem, updateRoadmapItem } from '../controller/adminRoadmap.controller';
 import { getUserProfile, login, logout, register } from '../controller/authController';
 import { createComment, deleteComment, getComments, updateComment } from '../controller/commentController';
-import { getRoadmapItem, getRoadmapItems, toggleUpvote } from '../controller/roadmapController';
+import { getRoadmapItem, getRoadmapItems, getRoadmapItemsWithStats, toggleUpvote } from '../controller/roadmapController';
 import { authMiddleware } from '../middleware/auth';
 import { isAdmin } from '../middleware/isAdmin';
 
@@ -30,7 +30,7 @@ router.post('/auth/mes', authMiddleware, (req, res) => {
 // Roadmap
 router.get('/roadmap', getRoadmapItems);
 router.get('/roadmap/:id', getRoadmapItem); // Assuming this is to get a specific roadmap item
-router.patch('/roadmap/:id/upvote', authMiddleware, toggleUpvote);
+router.patch('/roadmap/upvote/:id', authMiddleware, toggleUpvote);
 
 // Comments
 router.get('/comments/:roadmapId', getComments);

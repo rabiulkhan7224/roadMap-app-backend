@@ -7,7 +7,7 @@ interface IRoadmapItem {
     category: 'Feature' | 'Bug' | 'Improvement' | 'UI/UX' | 'Performance' | 'Security' | 'Integration' | 'Testing' | 'Documentation' | 'Other';
     createdBy: Schema.Types.ObjectId;
     upvotes: number;
-    upvotedBy: Schema.Types.ObjectId[];
+     upvotedBy: string[];
     }
 
 const RoadmapItemSchema = new Schema< IRoadmapItem >({
@@ -17,7 +17,7 @@ const RoadmapItemSchema = new Schema< IRoadmapItem >({
     category:{ type:String, enum:['Feature', 'Bug', 'Improvement', 'UI/UX', 'Performance', 'Security', 'Integration', 'Testing', 'Documentation', 'Other'], default:'Feature' },
     createdBy: {type:Schema.Types.ObjectId, ref:"User", required:true},
     upvotes: {type:Number, default:0},
-    upvotedBy:[{type:Schema.Types.ObjectId, ref:"User"}],
+    upvotedBy:[{ type: String }],
 },
 {timestamps:true});
 
