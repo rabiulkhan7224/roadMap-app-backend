@@ -4,14 +4,21 @@ import { AuthRequest } from "../middleware/auth";
 
 export const createRoadmapItem = async (req:AuthRequest, res:Response) => {
   
-    const { title, description, status } = req.body;
-    const Item = RoadmapItem.create({
+    const { title, description, status, category} = req.body;
+    try {
+      const newItem = new RoadmapItem({
         title,
         description,
         status,
-        createdBy: req.userId, 
-    });
-    res.status(201).json({ message: 'Roadmap item created successfully' });
+        category,
+        createdBy: req.userId
+      });
+      const savedItem = await newItem.save();
+      res.status(201).json(savedItem);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to create roadmap item", error });
+    }
+    
 
 };
 

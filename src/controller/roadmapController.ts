@@ -79,7 +79,10 @@ export const toggleUpvote = async (req: AuthRequest, res: Response) => {
     }
 
     await item.save();
-    res.json({ upvotes: item.upvotedBy.length });
+    res.json({
+      upvotes: item.upvotedBy.length,
+      upvoted: item.upvotedBy.includes(userObjectId.toString())
+    });
   } catch (error) {
     console.error("Upvote Error:", error);
     res.status(500).json({ message: "Internal Server Error" });

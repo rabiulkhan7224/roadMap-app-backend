@@ -5,6 +5,7 @@ import { createComment, deleteComment, getComments, updateComment } from '../con
 import { getRoadmapItem, getRoadmapItems, getRoadmapItemsWithStats, toggleUpvote } from '../controller/roadmapController';
 import { authMiddleware } from '../middleware/auth';
 import { isAdmin } from '../middleware/isAdmin';
+import { testPayment } from '../controller/test/payment';
 
 // Extend Express Request interface to include 'user'
 declare global {
@@ -26,6 +27,8 @@ router.post('/auth/me', authMiddleware, getUserProfile)
 router.post('/auth/mes', authMiddleware, (req, res) => {
   res.json({ user: req.user });
 });
+
+router.post('/process_payment',testPayment)
 
 // Roadmap
 router.get('/roadmap', getRoadmapItems);
