@@ -10,3 +10,4 @@
 2025-10-25 11:46:36 — perf: ⚡ speed up image loading
 2025-10-25 11:46:39 — feat: 🚀 add dark mode toggle
 2025-10-25 11:46:42 — fix: 🐛 correct navbar bug
+2025-10-25 11:46:45 — fix: 🐛 resolve login issue
