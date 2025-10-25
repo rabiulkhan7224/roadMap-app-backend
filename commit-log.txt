@@ -23,3 +23,4 @@
 2025-10-25 11:47:15 — test: ✅ add unit tests
 2025-10-25 11:47:18 — chore: 📦 update dependencies
 2025-10-25 11:47:21 — style: ✨ improve button hover
+2025-10-25 11:47:24 — docs: 📝 update README
