@@ -7,3 +7,4 @@
 2025-10-25 11:46:27 — refactor: 🔧 optimize API calls
 2025-10-25 11:46:30 — feat: 🚀 add dark mode toggle
 2025-10-25 11:46:33 — feat: 🎨 improve UI layout
+2025-10-25 11:46:36 — perf: ⚡ speed up image loading
