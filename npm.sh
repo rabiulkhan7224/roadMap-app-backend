@@ -4,7 +4,7 @@
 # Usage:
 #   ./npm.sh dev
 #   ./npm.sh build
-#   ./npm.sh commit "your message"
+#   ./npm.sh commit ""your message"
 #   ./npm.sh daily
 
 CMD=$1
