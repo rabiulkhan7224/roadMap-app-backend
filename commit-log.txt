@@ -18,3 +18,4 @@
 2025-10-25 11:47:00 — perf: ⚡ speed up image loading
 2025-10-25 11:47:03 — refactor: 🔧 optimize API calls
 2025-10-25 11:47:06 — feat: 🎨 improve UI layout
+2025-10-25 11:47:09 — fix: 🐛 correct navbar bug
