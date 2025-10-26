@@ -51,3 +51,4 @@
 2025-10-26 11:17:26 — chore: 📦 update dependencies
 2025-10-26 11:17:29 — docs: 📝 update README
 2025-10-26 11:17:32 — chore: 📦 update dependencies
+2025-10-26 11:17:35 — perf: ⚡ speed up image loading
