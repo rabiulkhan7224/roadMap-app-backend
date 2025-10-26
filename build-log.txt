@@ -1,0 +1,186 @@
+=========================================
+[2025-10-25 12:47:03] 🚀 Build Script Started
+[2025-10-25 12:47:03] 🧹 Step 1: Running ESLint with auto-fix...
+npm warn Unknown cli config "--fix". This will stop working in the next major version of npm.
+npm error Missing script: "lint"
+npm error
+npm error Did you mean this?
+npm error   npm link # Symlink a package folder
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: C:\Users\mdrab\AppData\Local\npm-cache\_logs\2025-10-25T06_47_04_208Z-debug-0.log
+[2025-10-25 12:47:04] ❌ Lint failed. Fix the errors and try again.
+=========================================
+[2025-10-25 12:48:30] 🚀 Build Script Started
+[2025-10-25 12:48:30] 🧹 Step 1: Running ESLint with auto-fix...
+npm warn Unknown cli config "--fix". This will stop working in the next major version of npm.
+npm error Missing script: "lint"
+npm error
+npm error Did you mean this?
+npm error   npm link # Symlink a package folder
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: C:\Users\mdrab\AppData\Local\npm-cache\_logs\2025-10-25T06_48_30_807Z-debug-0.log
+[2025-10-25 12:48:31] ❌ Lint failed. Fix the errors and try again.
+=========================================
+[2025-10-25 12:49:36] 🚀 Build Script Started
+[2025-10-25 12:49:36] 🧹 Step 1: Running ESLint with auto-fix...
+npm warn Unknown cli config "--fix". This will stop working in the next major version of npm.
+npm error Missing script: "lint"
+npm error
+npm error Did you mean this?
+npm error   npm link # Symlink a package folder
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: C:\Users\mdrab\AppData\Local\npm-cache\_logs\2025-10-25T06_49_37_228Z-debug-0.log
+[2025-10-25 12:49:37] ❌ Lint failed. Fix the errors and try again.
+=========================================
+[2025-10-25 12:53:00] 🚀 Build Script Started
+[2025-10-25 12:53:00] 🧹 Step 1: Running ESLint with auto-fix...
+npm warn Unknown cli config "--fix". This will stop working in the next major version of npm.
+npm error Missing script: "lint"
+npm error
+npm error Did you mean this?
+npm error   npm link # Symlink a package folder
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: C:\Users\mdrab\AppData\Local\npm-cache\_logs\2025-10-25T06_53_00_672Z-debug-0.log
+[2025-10-25 12:53:00] ❌ Lint failed. Fix the errors and try again.
+=========================================
+[2025-10-25 12:53:42] 🚀 Build Script Started
+[2025-10-25 12:53:42] 🧹 Step 1: Running ESLint with auto-fix...
+npm warn Unknown cli config "--fix". This will stop working in the next major version of npm.
+
+> roadmap-app-backend@1.0.0 lint
+> eslint . --ext .js,.jsx,.ts,.tsx
+
+
+Oops! Something went wrong! :(
+
+ESLint: 9.38.0
+
+Error: The 'jiti' library is required for loading TypeScript configuration files. Make sure to install it.
+    at C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\config\config-loader.js:145:10
+    at async loadTypeScriptConfigFileWithJiti (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\config\config-loader.js:144:3)
+    at async loadConfigFile (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\config\config-loader.js:266:11)
+    at async ConfigLoader.calculateConfigArray (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\config\config-loader.js:589:23)
+    at async #calculateConfigArray (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\config\config-loader.js:743:23)
+    at async directoryFilter (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\eslint\eslint-helpers.js:309:5)
+    at async NodeHfs.<anonymous> (file:///C:/Users/mdrab/projects/roadMap-app-backend/node_modules/@humanfs/core/src/hfs.js:586:29)
+    at async NodeHfs.walk (file:///C:/Users/mdrab/projects/roadMap-app-backend/node_modules/@humanfs/core/src/hfs.js:614:3)
+    at async globSearch (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\eslint\eslint-helpers.js:364:20)
+    at async Promise.allSettled (index 0)
+[2025-10-25 12:53:43] ❌ Lint failed. Fix the errors and try again.
+=========================================
+[2025-10-25 12:55:29] 🚀 Build Script Started
+[2025-10-25 12:55:29] 🧹 Step 1: Running ESLint with auto-fix...
+npm warn Unknown cli config "--fix". This will stop working in the next major version of npm.
+
+> roadmap-app-backend@1.0.0 lint
+> eslint . --ext .js,.jsx,.ts,.tsx
+
+
+
+
+Oops! Something went wrong! :(
+
+
+
+
+ESLint: 9.38.0
+
+
+
+
+Error: The 'jiti' library is required for loading TypeScript configuration files. Make sure to install it.
+    at C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\config\config-loader.js:145:10
+    at async loadTypeScriptConfigFileWithJiti (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\config\config-loader.js:144:3)
+    at async loadConfigFile (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\config\config-loader.js:266:11)
+    at async ConfigLoader.calculateConfigArray (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\config\config-loader.js:589:23)
+    at async #calculateConfigArray (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\config\config-loader.js:743:23)
+    at async directoryFilter (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\eslint\eslint-helpers.js:309:5)
+    at async NodeHfs.<anonymous> (file:///C:/Users/mdrab/projects/roadMap-app-backend/node_modules/@humanfs/core/src/hfs.js:586:29)
+    at async NodeHfs.walk (file:///C:/Users/mdrab/projects/roadMap-app-backend/node_modules/@humanfs/core/src/hfs.js:614:3)
+    at async globSearch (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\eslint\eslint-helpers.js:364:20)
+    at async Promise.allSettled (index 0)
+[2025-10-25 12:55:29] ❌ Lint failed. Fix the errors and try again.
+=========================================
+[2025-10-25 12:57:50] 🚀 Build Script Started
+[2025-10-25 12:57:50] 🧹 Step 1: Running ESLint with auto-fix...
+
+> roadmap-app-backend@1.0.0 lint:fix
+> eslint . --ext .js,.jsx,.ts,.tsx --fix
+
+
+Oops! Something went wrong! :(
+
+ESLint: 9.38.0
+
+Error: The 'jiti' library is required for loading TypeScript configuration files. Make sure to install it.
+    at C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\config\config-loader.js:145:10
+    at async loadTypeScriptConfigFileWithJiti (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\config\config-loader.js:144:3)
+    at async loadConfigFile (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\config\config-loader.js:266:11)
+    at async ConfigLoader.calculateConfigArray (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\config\config-loader.js:589:23)
+    at async #calculateConfigArray (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\config\config-loader.js:743:23)
+    at async directoryFilter (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\eslint\eslint-helpers.js:309:5)
+    at async NodeHfs.<anonymous> (file:///C:/Users/mdrab/projects/roadMap-app-backend/node_modules/@humanfs/core/src/hfs.js:586:29)
+    at async NodeHfs.walk (file:///C:/Users/mdrab/projects/roadMap-app-backend/node_modules/@humanfs/core/src/hfs.js:614:3)
+    at async globSearch (C:\Users\mdrab\projects\roadMap-app-backend\node_modules\eslint\lib\eslint\eslint-helpers.js:364:20)
+    at async Promise.allSettled (index 0)
+[2025-10-25 12:57:51] ❌ Lint failed. Fix the errors and try again.
+=========================================
+[2025-10-25 12:59:13] 🚀 Build Script Started
+[2025-10-25 12:59:13] 🧹 Step 1: Running ESLint with auto-fix...
+
+> roadmap-app-backend@1.0.0 lint:fix
+> eslint . --ext .js,.jsx,.ts,.tsx --fix
+
+
+C:\Users\mdrab\projects\roadMap-app-backend\src\controller\roadmapController.ts
+    4:20  error  'Schema' is defined but never used                  @typescript-eslint/no-unused-vars
+   10:37  error  Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+   21:15  error  'totalComments' is assigned a value but never used  @typescript-eslint/no-unused-vars
+   22:15  error  'totalUpvotes' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  142:37  error  Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+
+C:\Users\mdrab\projects\roadMap-app-backend\src\models\User.ts
+  11:6  error  'UserDocument' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\mdrab\projects\roadMap-app-backend\src\routes\index.ts
+   5:43  error  'getRoadmapItemsWithStats' is defined but never used  @typescript-eslint/no-unused-vars
+  12:3   error  ES2015 module syntax is preferred over namespaces     @typescript-eslint/no-namespace
+  14:14  error  Unexpected any. Specify a different type              @typescript-eslint/no-explicit-any
+
+✖ 9 problems (9 errors, 0 warnings)
+
+[2025-10-25 12:59:15] ❌ Lint failed. Fix the errors and try again.
+=========================================
+[2025-10-25 12:59:29] 🚀 Build Script Started
+[2025-10-25 12:59:29] 🧹 Step 1: Running ESLint with auto-fix...
+
+> roadmap-app-backend@1.0.0 lint:fix
+> eslint . --ext .js,.jsx,.ts,.tsx --fix
+
+
+C:\Users\mdrab\projects\roadMap-app-backend\src\controller\roadmapController.ts
+    4:20  error  'Schema' is defined but never used                  @typescript-eslint/no-unused-vars
+   10:37  error  Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+   21:15  error  'totalComments' is assigned a value but never used  @typescript-eslint/no-unused-vars
+   22:15  error  'totalUpvotes' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  142:37  error  Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+
+C:\Users\mdrab\projects\roadMap-app-backend\src\models\User.ts
+  11:6  error  'UserDocument' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\mdrab\projects\roadMap-app-backend\src\routes\index.ts
+   5:43  error  'getRoadmapItemsWithStats' is defined but never used  @typescript-eslint/no-unused-vars
+  12:3   error  ES2015 module syntax is preferred over namespaces     @typescript-eslint/no-namespace
+  14:14  error  Unexpected any. Specify a different type              @typescript-eslint/no-explicit-any
+
+✖ 9 problems (9 errors, 0 warnings)
+
+[2025-10-25 12:59:30] ❌ Lint failed. Fix the errors and try again.
